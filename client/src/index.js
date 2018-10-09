@@ -7,13 +7,14 @@ import { Provider } from 'react-redux';
 import store from './store';
 import {getMeetings} from "./actions/meetingActions";
 import {getEmployees} from "./actions/employeeActions";
+import Routes from "./auth/Routes";
 
 store.dispatch(getMeetings());
 store.dispatch(getEmployees());
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Routes />
   </Provider>,
   document.getElementById('root')
 );
