@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import UserInfo from "./UserInfo";
 import EndorsementList from "./EndorsementList";
+import TopNavBar from "./TopNavBar";
 
 const UserPage = props => {
 
@@ -11,6 +12,7 @@ const UserPage = props => {
     <React.Fragment>
       {employee &&
       <div>
+        <TopNavBar/>
         <UserInfo employee={employee}/>
 
         <h3>Endorsements Received:</h3>

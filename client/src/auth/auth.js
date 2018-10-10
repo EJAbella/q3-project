@@ -7,7 +7,7 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'ejabella.auth0.com',
     clientID: '8FyPahjOphzkmzq9CrV1SVcQu9pQso3B',
-    redirectUri: process.env.NODE_ENV === 'development' ? 'http://localhost:3000/' : 'https://appbaseio-apps.github.io/reactivesearch-auth0-example/callback',
+    redirectUri: process.env.NODE_ENV === 'development' ? 'http://localhost:3000/callback' : 'https://appbaseio-apps.github.io/reactivesearch-auth0-example/callback',
     audience: 'https://ejabella.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid'

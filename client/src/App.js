@@ -9,18 +9,16 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 class App extends Component {
   render() {
     return (
-      <div>Test
-      {/*<Router>*/}
-        {/*<div>*/}
-          {/*<TopNavBar/>*/}
+      <Router>
+        <div>
+          <TopNavBar/>
 
-          {/*<Route exact path='/' component={HomePage}/>*/}
+          <Route exact path='/meeting' component={HomePage}/>
           {/*<Route path='/meeting/:id' component={MeetingPage}/>*/}
-          {/*<Route path='/employee/:id' component={UserPage}/>*/}
+          <Route path='/employee/:id' component={UserPage}/>
 
-        {/*</div>*/}
-      {/*</Router>*/}
-      </div>
+        </div>
+      </Router>
     );
   }
 }

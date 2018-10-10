@@ -4,6 +4,8 @@ import Home from './Home';
 import Callback from './Callback';
 import Auth from './auth';
 import history from './history';
+import MeetingPage from "../components/MeetingPage";
+import UserPage from "../components/UserPage";
 
 const auth = new Auth();
 
@@ -19,6 +21,8 @@ const Routes = () => {
       <div>
         <Route exact path="/" render={(props) => <Home auth={auth} {...props} />} />
         <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
+        <Route path="/meeting/:id" render={(props) => <MeetingPage auth={auth} {...props} />} />
+        <Route path="/employee/:id" render={(props) => <UserPage auth={auth} {...props} />} />
         <Route path="/callback" render={(props) => {
           handleAuthentication(props);
           return <Callback {...props}/>
