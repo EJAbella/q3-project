@@ -14,7 +14,7 @@ const Meeting = ({ meeting, deleteMeeting }) => {
           <CardTitle>{meeting.title}</CardTitle>
           <CardSubtitle>Presented By: <Link to={`/employee/${meeting.presenter.id}`}>{meeting.presenter.name}</Link></CardSubtitle>
           <CardText>{meeting.about}</CardText>
-          <Link to={`/meeting/${meeting.id}`}><Button>More Info</Button></Link> <Button onClick={() => deleteMeeting(meeting.id)} color="danger">Delete</Button>
+          <Link to={`/meeting/${meeting.id}`}><Button className="li"><a>More Info</a></Button></Link> {localStorage.getItem('userId') == meeting.presenter.id && <Button onClick={() => deleteMeeting(meeting.id)} color="danger" className="li"><a>Delete</a></Button>}
         </CardBody>
       </Card>
     </div>

@@ -39,8 +39,9 @@ class UpdateMeetingForm extends Component {
     let presenterList = this.props.employees.map(employee => <option key={employee.id} value={employee.id}>{employee.name}</option>)
 
     return (
-      <div>
-        <Button onClick={() => this.setState({toggleForm: !this.state.toggleForm})} color="warning">Update Meeting Details</Button>
+      <React.Fragment>
+        <br/>
+        {localStorage.getItem('userId') == this.props.meeting.presenter.id && <Button onClick={() => this.setState({toggleForm: !this.state.toggleForm})} color="warning">Update Meeting Details</Button>}
         {this.state.toggleForm &&
         <Form onSubmit={this.handleSubmit} id='meeting-form'>
           <FormGroup>
@@ -64,7 +65,7 @@ class UpdateMeetingForm extends Component {
           <Button>Submit</Button>
         </Form>
         }
-      </div>
+      </React.Fragment>
     );
   }
 }

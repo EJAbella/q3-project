@@ -13,10 +13,16 @@ const UserPage = props => {
       {employee &&
       <div>
         <TopNavBar/>
-        <UserInfo employee={employee}/>
-
-        <h3>Endorsements Received:</h3>
-        <EndorsementList employee={employee}/>
+        <div id='user-page'>
+          <div class='row'>
+            <UserInfo employee={employee}/>
+          </div>
+          <hr/>
+          <div id='endorsement-container'>
+            <h3>Endorsements Received:</h3>
+            <EndorsementList employee={employee}/>
+          </div>
+        </div>
       </div>
       }
     </React.Fragment>

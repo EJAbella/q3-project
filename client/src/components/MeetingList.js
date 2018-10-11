@@ -7,7 +7,7 @@ const MeetingList = props => {
   let meetingList = props.meetings.map(meeting => <Meeting key={meeting.id} meeting={meeting}/>);
 
   return (
-    <div>
+    <div id='card-container'>
       {meetingList}
     </div>
   );

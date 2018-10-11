@@ -10,13 +10,19 @@ const UserInfo = ({ employee }) => {
   return (
     <React.Fragment>
       {employee &&
-      <div>
-        <h1>{employee.name}</h1>
-        <p>{employee.bio}</p>
+      <React.Fragment>
+        <div className='col-3'>
+          <img src={employee.img} alt=""/>
+          <h2>Level: {Math.floor(level)}</h2>
+        </div>
+        <div id='user-info' className='col-9'>
+          <h1>{employee.name}</h1>
+          <p>{employee.bio}</p>
+          <Progress animated color="success" value={progress}/>
+        </div>
 
-        <h3>Level: {Math.floor(level)}</h3>
-        <Progress animated color="success" value={progress}/>
-      </div>
+
+      </React.Fragment>
       }
     </React.Fragment>
   );

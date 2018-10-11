@@ -38,7 +38,7 @@ export default (state = initialState, action) => {
         if(employee.id === action.payload.employeeId) {
           return {
             ...employee,
-            points: employee.points += 10,
+            points: employee.points+=10,
             endorsements: employee.endorsements.map(endorsement => {
               if(endorsement.id === action.payload.endorsementId) {
                 return {

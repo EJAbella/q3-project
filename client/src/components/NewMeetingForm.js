@@ -27,6 +27,7 @@ class NewMeetingForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    this.setState({toggleForm: false})
     return this.props.createMeeting(this.state.meeting);
   }
 
@@ -37,13 +38,13 @@ class NewMeetingForm extends Component {
     let presenterList = this.props.employees.map(employee => <option key={employee.id} value={employee.id}>{employee.name}</option>)
 
     return (
-      <div>
-        <Button onClick={() => this.setState({toggleForm: !this.state.toggleForm})}>Create New Meeting</Button>
+      <div id='new-meeting-form'>
+        <button class='sliding-button' onClick={() => this.setState({toggleForm: !this.state.toggleForm})}>Create New Meeting</button>
         {this.state.toggleForm &&
         <Form onSubmit={this.handleSubmit} id='meeting-form'>
           <FormGroup>
             <Label for="title">Meeting Title</Label>
-            <Input onChange={this.handleChange} type="text" name="title" id="title" placeholder="Title..." required/>
+            <Input onChange={this.handleChange} autocomplete='off' type="text" name="title" id="title" placeholder="Title..." required/>
           </FormGroup>
           <FormGroup>
             <Label for="presenter">Presenter</Label>
@@ -54,13 +55,13 @@ class NewMeetingForm extends Component {
           </FormGroup>
           <FormGroup>
             <Label for="imgUrl">Img URL</Label>
-            <Input onChange={this.handleChange} type="text" name="imgUrl" id="imgUrl" placeholder="Add image url..." required/>
+            <Input onChange={this.handleChange} autocomplete='off' type="text" name="imgUrl" id="imgUrl" placeholder="Add image url..." required/>
           </FormGroup>
           <FormGroup>
             <Label for="about">Meeting Details</Label>
             <Input onChange={this.handleChange} type="textarea" name="about" id="about" required/>
           </FormGroup>
-          <Button>Submit</Button>
+          <Button className='sliding-button'>Submit</Button>
         </Form>
         }
       </div>

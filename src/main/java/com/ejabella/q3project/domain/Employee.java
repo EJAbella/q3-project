@@ -22,6 +22,10 @@ public class Employee {
     private String bio;
     private int points;
 
+    @Lob
+    @Type(type = "org.hibernate.type.TextType")
+    private String img;
+
     @OneToMany(mappedBy = "employee")
     @JsonManagedReference
     private List<Endorsement> endorsements;
@@ -31,6 +35,14 @@ public class Employee {
     private List<Meeting> meetings = new ArrayList<>();
 
     public Employee() {
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public List<Meeting> getMeetings() {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import TopNavBar from "./components/TopNavBar";
 import HomePage from './components/HomePage';
 import MeetingPage from './components/MeetingPage';

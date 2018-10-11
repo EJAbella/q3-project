@@ -24,7 +24,7 @@ class EndorsementList extends React.Component {
                                                                                         endorsement={endorsement}/>)
 
     return (
-      <React.Fragment>
+      <div id='endorsement-list'>
         <ListGroup>
           {endorsements}
         </ListGroup>
@@ -32,7 +32,7 @@ class EndorsementList extends React.Component {
           <InputGroupAddon addonType="prepend" onClick={this.handleClick}><Button>New Endorsement!</Button></InputGroupAddon>
           <Input onChange={e => this.setState({endorsement: e.target.value})} value={this.state.endorsement}/>
         </InputGroup>
-      </React.Fragment>
+      </div>
     );
   }
 };

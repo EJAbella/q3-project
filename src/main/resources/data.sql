@@ -1,7 +1,7 @@
-INSERT INTO employee (name, bio, points) VALUES
-  ('Elijah', 'Bio about Elijah here', 0),
-  ('Jimmy', 'Bio about James McGill', 0),
-  ('Chuck', 'Some bio about Chuck McGill', 10);
+INSERT INTO employee (name, bio, points, img) VALUES
+  ('Elijah', 'Bio about Elijah here', 0, 'https://yourvalley.net/yourvalley/wp-content/uploads/sites/2/2018/08/dog-names.jpeg'),
+  ('Jimmy', 'Bio about James McGill', 0, 'http://cdn.akc.org/content/article-body-image/housetrain_adult_dog_hero.jpg'),
+  ('Chuck', 'Some bio about Chuck McGill', 10, 'https://www.therapydogs.com/wp-content/uploads/2017/06/puppy.jpg');
 
 INSERT INTO meeting (title, about, img_url, presenter_id) VALUES
   ('Intro to some coding stuff', 'Teaching some stuff about basic JS and HTML and CSS', 'https://cdn1-www.dogtime.com/assets/uploads/2010/12/puppies.jpg', 1),

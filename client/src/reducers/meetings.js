@@ -46,7 +46,7 @@ export default (state = initialState, action) => {
       return state;
 
     case UPDATE_MEETING_SUCCESS:
-      return state.map(meeting => meeting.id === action.payload.id ? action.payload: meeting);
+      return state.map(meeting => meeting.id === action.payload.id ? action.payload : meeting);
 
     case UPDATE_MEETING_FAILED:
       return state;

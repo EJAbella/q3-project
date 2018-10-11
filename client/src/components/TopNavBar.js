@@ -28,19 +28,17 @@ export default class TopNavBar extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Navbar color="primary" dark expand="md">
-          <Link to="/" className="nav-item">HOME</Link>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink onClick={this.props.logout}>Logout</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
+      <Navbar color="black" dark expand="md">
+        <Link to="/" className="nav-item">HOME</Link>
+        <NavbarToggler onClick={this.toggle} />
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink onClick={this.props.logout}>Logout</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
     );
   }
 }
