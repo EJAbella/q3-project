@@ -3,9 +3,11 @@ import { Button } from 'reactstrap';
 
 const LoginPage = ({ login }) => {
   return (
-    <div>
-      Login Here
-      <Button onClick={login}>Log In</Button>
+    <div className="login-container">
+      <div className='login-content'>
+        <h1>Welcome</h1>
+        <Button onClick={login}>Log In</Button>
+      </div>
     </div>
   );
 };

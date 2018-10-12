@@ -11,6 +11,7 @@ body {
   background-color: black; }
 
 .nav-item {
+  font-size: 24px;
   color: white; }
 
 #jumbotron {
@@ -25,7 +26,7 @@ body {
     width: 100%;
     transition: all 0.3s; }
     #new-meeting-form button:hover {
-      background-color: #82b6ff; }
+      background-color: #1d273a; }
   #new-meeting-form #meeting-form {
     margin: auto;
     width: 80%;
@@ -42,7 +43,14 @@ body {
     margin-top: 50px;
     transform: rotateX(-14deg) rotateY(45deg);
     transition: all 0.3s;
-    box-shadow: -50px 10px 100px 5px; }
+    box-shadow: -50px 10px 100px 5px;
+    text-align: center;
+    font-size: 16px; }
+    #card-container .meeting-card h5 {
+      font-size: 24px; }
+    #card-container .meeting-card h6 {
+      font-size: 20px;
+      margin-bottom: 10px; }
     #card-container .meeting-card:hover {
       width: 600px;
       transform: rotateX(0deg) rotateY(0deg); }
@@ -51,7 +59,8 @@ body {
       height: 60px;
       overflow: scroll; }
     #card-container .meeting-card button {
-      margin: 5px; }
+      margin: 5px;
+      font-size: 24px; }
 
 #meeting-form {
   width: 500px;
@@ -65,8 +74,7 @@ body {
   z-index: -1;
   margin: auto;
   width: 100%;
-  height: 600px;
-  background-image: url("https://cdn2-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg");
+  height: 750px;
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(8px); }
@@ -78,15 +86,22 @@ body {
   #meeting-info img {
     margin: 5% 30%;
     width: 40%;
-    height: 400px;
+    height: 500px;
     border: 10px solid white; }
   #meeting-info #meeting-details {
     margin: auto;
     margin-top: 30px;
     width: 80%;
-    text-align: center; }
+    text-align: center;
+    font-size: 24px; }
+    #meeting-info #meeting-details h1 {
+      font-size: 48px;
+      font-weight: bolder; }
+    #meeting-info #meeting-details h4 {
+      font-size: 32px; }
     #meeting-info #meeting-details button {
-      margin: 5px; }
+      margin: 5px;
+      font-size: 22px; }
     #meeting-info #meeting-details form {
       margin: auto;
       padding: 20px; }
@@ -112,7 +127,8 @@ body {
     background: grey;
     transition: all 0.3s ease; }
   .sliding-button:hover {
-    color: #fff; }
+    color: #fff;
+    cursor: pointer; }
   .sliding-button:hover:after {
     left: 0;
     width: 100%; }
@@ -128,9 +144,11 @@ body {
   #user-page h2 {
     margin-top: 25px;
     margin-bottom: 15px;
-    text-align: center; }
+    text-align: center;
+    font-weight: bolder; }
   #user-page img {
-    width: 100%;
+    width: 600px;
+    height: 500px;
     border-radius: 50%; }
   #user-page #user-info {
     margin: auto 0;
@@ -156,5 +174,29 @@ body {
     color: forestgreen; }
     #endorsement-list li a:hover {
       cursor: pointer; }
+
+.login-container {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: #82b6ff;
+  background: linear-gradient(to top left, #2d3ea3 0%, #82b6ff 100%); }
+  .login-container .login-content {
+    color: white;
+    padding: 40vh 80vh;
+    text-align: center; }
+    .login-container .login-content button {
+      outline: 0;
+      background-color: white;
+      border: 0;
+      padding: 10px 15px;
+      color: #1d273a;
+      border-radius: 3px;
+      width: 250px;
+      cursor: pointer;
+      font-size: 18px; }
+      .login-container .login-content button:hover {
+        color: #dfe9ff;
+        background-color: #1d273a; }
 
 /*# sourceMappingURL=style.css.map */

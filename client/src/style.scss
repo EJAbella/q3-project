@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
 
 $primary-color: #dfe9ff;
-$secondary-color: #82b6ff;
+$secondary-color: #1d273a;
 
 body {
   background: #ededed;
@@ -17,6 +17,7 @@ body {
 }
 
 .nav-item {
+  font-size: 24px;
   color: white;
 }
 
@@ -62,7 +63,17 @@ body {
     transform: rotateX(-14deg) rotateY(45deg);
     transition: all 0.3s;
     box-shadow: -50px 10px 100px 5px;
+    text-align: center;
+    font-size: 16px;
 
+    h5 {
+      font-size: 24px;
+    }
+
+    h6 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
 
     &:hover {
       width: 600px;
@@ -77,6 +88,7 @@ body {
 
     button {
       margin: 5px;
+      font-size: 24px;
     }
 
   }
@@ -96,8 +108,8 @@ body {
   z-index: -1;
   margin: auto;
   width: 100%;
-  height: 600px;
-  background-image: url("https://cdn2-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg");
+  height: 750px;
+  //background-image: url("https://cdn2-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(8px);
@@ -112,7 +124,7 @@ body {
   img {
     margin: 5% 30%;
     width: 40%;
-    height: 400px;
+    height: 500px;
     border: 10px solid white;
   }
   #meeting-details {
@@ -120,9 +132,20 @@ body {
     margin-top: 30px;
     width: 80%;
     text-align: center;
+    font-size: 24px;
+
+    h1 {
+      font-size: 48px;
+      font-weight: bolder;
+    }
+
+    h4 {
+      font-size: 32px;
+    }
 
     button {
       margin: 5px;
+      font-size: 22px;
     }
 
     form {
@@ -160,6 +183,7 @@ body {
 
   &:hover {
     color: #fff;
+    cursor: pointer;
   }
 
   &:hover:after {
@@ -183,10 +207,12 @@ body {
     margin-top: 25px;
     margin-bottom: 15px;
     text-align: center;
+    font-weight: bolder;
   }
 
   img {
-    width: 100%;
+    width: 600px;
+    height: 500px;
     border-radius: 50%;
   }
 
@@ -227,3 +253,34 @@ body {
   }
 }
 
+.login-container {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: #82b6ff;
+  background: linear-gradient(to top left, #2d3ea3 0%, #82b6ff 100%);
+
+  .login-content {
+    color: white;
+    padding: 40vh 80vh;
+    text-align: center;
+
+    button {
+      outline: 0;
+      background-color: white;
+      border: 0;
+      padding: 10px 15px;
+      color: $secondary-color;
+      border-radius: 3px;
+      width: 250px;
+      cursor: pointer;
+      font-size: 18px;
+
+      &:hover {
+        color: $primary-color;
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+}

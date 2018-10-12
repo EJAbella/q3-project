@@ -29,7 +29,7 @@ export default class TopNavBar extends React.Component {
   render() {
     return (
       <Navbar color="black" dark expand="md">
-        <Link to="/" className="nav-item">HOME</Link>
+        <Link to="/" className="nav-item">MEETINGS</Link>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>

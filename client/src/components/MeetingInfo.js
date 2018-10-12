@@ -10,12 +10,16 @@ const MeetingInfo = ({ meeting, addAttendee }) => {
 
   let attendees = meeting.attendees.map(attendee => <ListGroupItem key={attendee.id} className="justify-content-between"><Link to={`/employee/${attendee.id}`}>{attendee.name}</Link> <Badge pill>{attendee.points}</Badge></ListGroupItem>)
 
+  let bgTags = {
+    backgroundImage: `url(${meeting.imgUrl})`
+  }
+
 
   return (
     <React.Fragment>
       {meeting &&
       <React.Fragment>
-      <div id='bg-image'></div>
+      <div id='bg-image' style={bgTags}></div>
       <div id='meeting-info'>
         <img src={meeting.imgUrl} alt=""/>
         <div id='meeting-details'>
@@ -38,3 +42,5 @@ const MeetingInfo = ({ meeting, addAttendee }) => {
 };
 
 export default connect(null, { addAttendee })(MeetingInfo);
+
+
